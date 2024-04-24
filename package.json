@@ -1,0 +1,16 @@
+{
+  "name": "zhiyong_serverless",
+  "version": "1.0.0",
+  "description": "my first serverless repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "save-dev": "^0.0.1-security",
+    "serverless-offline": "^13.3.4"
+  },
+  "devDependencies": {}
+}

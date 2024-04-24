@@ -1,0 +1,25 @@
+service: zhiyong-aws-node-http-api-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
+
+postfunctions:
+  api:
+    handler: index.zypost
+    events:
+      - httpApi:
+          path: /zypost
+          method: post
+
+plugins:
+  - serverless-offline

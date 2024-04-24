@@ -13,8 +13,7 @@ functions:
           path: /
           method: get
 
-postfunctions:
-  api:
+  postfunctions:
     handler: index.zypost
     events:
       - httpApi:

@@ -1,10 +1,9 @@
-module.exports.handler = async (event) => {
+module.exports.firsthandler = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
         message: "Your severless function executed successfully!",
-        
       },
       null,
       2
@@ -12,7 +11,7 @@ module.exports.handler = async (event) => {
   };
 };
 
-module.exports.zypost = async (event) => {
+module.exports.secondhandler = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify(

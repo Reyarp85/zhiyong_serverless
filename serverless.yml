@@ -1,4 +1,4 @@
-service: zhiyong-aws-node-http-api-project
+service: c5-zhiyong-i
 frameworkVersion: '3'
 
 provider:
@@ -6,15 +6,15 @@ provider:
   runtime: nodejs18.x
 
 functions:
-  api:
-    handler: index.handler
+  firstfunction:
+    handler: index.firsthandler
     events:
       - httpApi:
-          path: /
+          path: /zyget
           method: get
 
-  postfunctions:
-    handler: index.zypost
+  secondfunction:
+    handler: index.secondhandler
     events:
       - httpApi:
           path: /zypost

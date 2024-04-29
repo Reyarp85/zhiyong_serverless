@@ -14,6 +14,8 @@ functions:
       - httpApi:
           path: /zyget
           method: get
+      - sqs:
+          arn: arn:aws:sqs:us-east-1:255945442255:zhiyong-serverless-sqs
 
   secondfunction:
     handler: index.secondhandler
@@ -21,11 +23,23 @@ functions:
       - httpApi:
           path: /zypost
           method: post
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - ZhiyongQueue
+              - Arn
+
+resources:
+  Resources:
+    ZhiyongQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "zhiyong-queue"
 
 package:
   exclude:
     - node_modules/**
     - venv/**
-    
+
 plugins:
   - serverless-offline

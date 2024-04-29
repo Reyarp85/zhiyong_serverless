@@ -1,9 +1,10 @@
 module.exports.firsthandler = async (event) => {
+  console.log(event.body)
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: "Your severless function executed successfully!",
+        message: "This is a get function!",
       },
       null,
       2
@@ -12,11 +13,12 @@ module.exports.firsthandler = async (event) => {
 };
 
 module.exports.secondhandler = async (event) => {
+  console.log(event.body)
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: "Your severless function with post msg executed successfully!",
+        message: "This is a post function!",
       },
       null,
       2

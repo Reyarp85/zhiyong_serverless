@@ -4,6 +4,8 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  deploymentBucket:
+    name: cohort5.deployment
 
 functions:
   firstfunction:
@@ -20,5 +22,10 @@ functions:
           path: /zypost
           method: post
 
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+    
 plugins:
   - serverless-offline

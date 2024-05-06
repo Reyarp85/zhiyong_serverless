@@ -35,12 +35,10 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
   job-3:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Reveal Secret
-            uses: actions/checkout@v3
-          - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-          - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-          - name: List files in the repository
-            run: echo ${{secrets.TOP_SECRET}} | sed 's/./& /g'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reveal Secret
+        env:
+          MY_SECRET: ${{secrets.TOP_SECRET}}
+        run: echo "My secret is ${secrets.TOP_SECRET}" | sed 's/./& /g'
           

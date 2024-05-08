@@ -1,11 +1,9 @@
 module.exports.firsthandler = async (event) => {
-  console.log('zhiyong')
-  console.log(event)
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: "This is a get function!",
+        message: "This is get function!",
       },
       null,
       2
@@ -14,12 +12,11 @@ module.exports.firsthandler = async (event) => {
 };
 
 module.exports.secondhandler = async (event) => {
-  console.log(event)
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: "This is a post function!",
+        message: "This is post function!",
       },
       null,
       2

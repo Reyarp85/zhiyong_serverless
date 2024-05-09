@@ -14,8 +14,6 @@ functions:
       - httpApi:
           path: /zyget
           method: get
-      - sqs:
-          arn: arn:aws:sqs:us-east-1:255945442255:zhiyong-serverless-sqs
 
   secondfunction:
     handler: index.secondhandler

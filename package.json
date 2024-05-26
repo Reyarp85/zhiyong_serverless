@@ -11,6 +11,6 @@
   "dependencies": {
     "jest": "^29.7.0",
     "save-dev": "^0.0.1-security",
-    "serverless-offline": "^13.3.4"
+    "serverless-offline": "^13.5.0"
   }
 }
